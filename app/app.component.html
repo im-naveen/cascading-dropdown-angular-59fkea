@@ -1,0 +1,19 @@
+<label>State:</label>
+<select [(ngModel)]="selectedState.id" (change)="onSelect($event.target.value)">
+  <option value="0">--Select--</option>
+  <option *ngFor="let state of states" value="{{ state.id }}">
+    {{ state.name }}
+  </option>
+</select>
+
+<br /><br />
+
+<div>
+  <label>District:</label>
+  <select>
+    <option value="0">--Select--</option>
+    <option *ngFor="let district of districts" value="{{ district.id }}">
+      {{ district.name }}
+    </option>
+  </select>
+</div>
